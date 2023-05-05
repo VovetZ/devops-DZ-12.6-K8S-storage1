@@ -63,10 +63,17 @@
 Проверим установку MicroK8S
 
 ```bash
-kubectl get nodes
-NAME            STATUS   ROLES    AGE   VERSION
-13-kubernetes   Ready    <none>   16m   v1.26.3
-microk8s kubectl get pod -A
+root@vkvm:/home/vk# kubectl get nodes
+NAME   STATUS   ROLES    AGE   VERSION
+vkvm   Ready    <none>   26d   v1.26.3
+root@vkvm:/home/vk# kubectl get pod -A
+NAMESPACE     NAME                                        READY   STATUS    RESTARTS        AGE
+kube-system   calico-node-tl7rj                           1/1     Running   8 (3m48s ago)   26d
+kube-system   kubernetes-dashboard-dc96f9fc-m949s         1/1     Running   9               26d
+kube-system   dashboard-metrics-scraper-7bc864c59-7dspr   1/1     Running   8               26d
+kube-system   coredns-6f5f9b5d74-c6l72                    1/1     Running   5               14d
+kube-system   calico-kube-controllers-79568db7f8-jk9ck    1/1     Running   8               26d
+kube-system   metrics-server-6f754f88d-qlllr              1/1     Running   9               26d
 ```
 
 ## Задание 1
